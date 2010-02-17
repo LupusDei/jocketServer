@@ -28,7 +28,7 @@ public class JocketServerTest
   }
 
   @Test
-  public void canMakeOneConnection() throws IOException
+  public void canMakeOneConnection() throws IOException, InterruptedException
   {
 
     servicer.serve(31415, countingServer);
@@ -38,7 +38,7 @@ public class JocketServerTest
   }
 
   @Test
-  public void canMakeMoreThanOneConnection() throws IOException
+  public void canMakeMoreThanOneConnection() throws IOException, InterruptedException
   {
     servicer.serve(31415, countingServer);
     connect(31415);
@@ -49,7 +49,7 @@ public class JocketServerTest
   }
 
   @Test
-  public void canProcessASentMessage() throws IOException
+  public void canProcessASentMessage() throws IOException, InterruptedException
   {
     servicer.serve(8080, new YapperServer());
     Socket sock = new Socket("localhost", 8080);
@@ -61,7 +61,7 @@ public class JocketServerTest
   }
 
   @Test
-  public void canRecieveAMessageFromTheClient() throws IOException
+  public void canRecieveAMessageFromTheClient() throws IOException, InterruptedException
   {
     servicer.serve(1337, new ResponderServer());
     Socket sock = new Socket("localhost", 1337);
@@ -72,6 +72,54 @@ public class JocketServerTest
     sock.close();
     servicer.close();
     assertEquals("This is the response", message);
+  }
+
+  @Test
+  public void canServeMultipleConnections() throws IOException, InterruptedException
+  {
+    servicer.serve(8888, new ResponderServer());
+
+    Socket sock1 = new Socket("localhost", 8888);
+    BufferedReader br1 = JocketService.getBufferedReader(sock1);
+    PrintStream ps1 = JocketService.getPrintStream(sock1);
+
+    Socket sock2 = new Socket("localhost", 8888);
+    BufferedReader br2 = JocketService.getBufferedReader(sock2);
+    PrintStream ps2 = JocketService.getPrintStream(sock2);
+
+    ps2.println("YAP!");
+    String yap2 = br2.readLine();
+    br2.close();
+
+    ps1.println("YAP!");
+    String yap1 = br1.readLine();
+    br1.close();
+
+    assertEquals("YAP!", yap1);
+    assertEquals("YAP!", yap2);
+    servicer.close();
+  }
+
+  @Test
+  public void wontCloseServerInstanceUntilSocketsClosed() throws IOException, InterruptedException
+  {
+    servicer.serve(8888, new ResponderServer());
+
+    Socket sock1 = new Socket("localhost", 8888);
+    BufferedReader br1 = JocketService.getBufferedReader(sock1);
+    PrintStream ps1 = JocketService.getPrintStream(sock1);
+
+    Socket sock2 = new Socket("localhost", 8888);
+    BufferedReader br2 = JocketService.getBufferedReader(sock2);
+    PrintStream ps2 = JocketService.getPrintStream(sock2);
+
+    Thread.sleep(30);
+    
+    assertEquals(2, servicer.getServerThreadCount());
+    JocketService.TIMEOUT_PERIOD = 10;
+    servicer.close();
+
+    assertEquals(0, servicer.getServerThreadCount());
   }
 
   private void connect(int port)
@@ -105,6 +153,7 @@ public class JocketServerTest
       {
         e.printStackTrace();
       }
+
     }
   }
 
