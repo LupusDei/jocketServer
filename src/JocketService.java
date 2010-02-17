@@ -61,6 +61,8 @@ public class JocketService
     if (serverSocketOpen)
     {
       serverSocketOpen = false;
+      serverSocket.close();
+      socketAcceptorThread.join();
       while (nobleServiceThreads.size() > 0)
       {
         Thread thread = null;
@@ -85,7 +87,6 @@ public class JocketService
           }
         }
       }
-      serverSocket.close();
     }
     else
       serverSocket.close();
