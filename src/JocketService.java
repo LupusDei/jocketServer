@@ -9,19 +9,19 @@ public class JocketService
 {
   private ServerSocket serverSocket = null;
   private boolean serverSocketOpen;
-  private JocketServer clientServer;
-  private Thread socketAcceptorThread;
+  private JocketServer applicationServer;
+  private Thread serverSocketThread;
   private List<Thread> nobleServiceThreads = Collections.synchronizedList(new ArrayList<Thread>());
   public static int TIMEOUT_PERIOD = 500;
   private Object mutex = new Object();
 
   public void serve(int port, JocketServer inputServer) throws IOException
   {
-    clientServer = inputServer;
+    applicationServer = inputServer;
     serverSocket = new ServerSocket(port);
     serverSocketOpen = true;
-    socketAcceptorThread = makeSocketThread();
-    socketAcceptorThread.start();
+    serverSocketThread = makeSocketThread();
+    serverSocketThread.start();
   }
 
   private Thread makeSocketThread()
@@ -55,6 +55,10 @@ public class JocketService
     }
   }
 
+  public boolean isOpen()
+  {
+    return serverSocketOpen;
+  }
 
   public void close() throws IOException, InterruptedException
   {
@@ -62,7 +66,7 @@ public class JocketService
     {
       serverSocketOpen = false;
       serverSocket.close();
-      socketAcceptorThread.join();
+      serverSocketThread.join();
       while (nobleServiceThreads.size() > 0)
       {
         Thread thread = null;
@@ -125,7 +129,7 @@ public class JocketService
       try
       {
 
-        clientServer.serve(clientSocket);
+        applicationServer.serve(clientSocket);
         clientSocket.close();
 
       }

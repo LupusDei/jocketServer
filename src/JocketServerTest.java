@@ -24,6 +24,11 @@ public class JocketServerTest
       {
         counter++;
       }
+
+      public String getLastRequest()
+      {
+        return null;
+      }
     };
   }
 
@@ -155,6 +160,11 @@ public class JocketServerTest
       }
 
     }
+
+    public String getLastRequest()
+    {
+      return null;
+    }
   }
 
   private class ResponderServer implements JocketServer
@@ -171,6 +181,11 @@ public class JocketServerTest
       {
         e.printStackTrace();
       }
+    }
+
+    public String getLastRequest()
+    {
+      return null;
     }
   }
 }
