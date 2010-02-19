@@ -1,10 +1,8 @@
+import java.io.FileNotFoundException;
 import java.net.Socket;
 
 public class JJocketServer implements JocketServer
 {
-  private String successHeader = "HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: 20000\n\r\n";
-  private String the404Response = "HTTP/1.1 404 Not Found\nContent-Type: text/html\nContent-Length: 20000\n\r\n"+
-        "<html><h2>404 Page Not Found!</h2></html>\n\r\n";
 
   public void serve(Socket sock)
   {
@@ -17,16 +15,50 @@ public class JJocketServer implements JocketServer
 
   public String getHomePageResponse()
   {
-      return successHeader + "<html><h2>Home Page!</h2></html>\n\r\n";
+      return getSuccessHeader() + getTextFromFileName("public/index.html");
   }
 
   public String getSuccessHeader()
   {
-    return successHeader;
+    return getTextFromFileName("public/successHeader");
   }
 
   public String get404Response()
   {
-    return the404Response;
+    String header = getTextFromFileName("public/404Header");
+    String body = getTextFromFileName("public/404.html");
+    return header + body;
+  }
+
+  private String getTextFromFileName(String fileName)
+  {
+    String text = "";
+    try{
+      text = FileParser.parseFile(fileName);
+    }
+    catch (Exception e)
+    {
+      return null;
+    }
+    return text;
+  }
+
+  public String getMyPageResponse()
+  {
+    return getSuccessHeader() + getTextFromFileName("public/my_page.html");
+  }
+
+  public String getPageResponse(String path)
+  {
+    if(path.equals("/"))
+        return getHomePageResponse();
+    else{
+      String responseBody = null;
+      responseBody = getTextFromFileName("public" + path);
+      if (responseBody == null)
+        return get404Response();
+
+      return getSuccessHeader() + getTextFromFileName("public" + path);
+    }
   }
 }

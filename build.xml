@@ -1,0 +1,39 @@
+<project name="JocketServer" default="jar" basedir=".">
+  <description>
+    JocketServer
+  </description>
+
+  <property  name="src" location="src"/>
+  <property  name="classes" location="classes"/>
+  <property  name="ant.build.javac.target" value="1.5"/>
+
+  <target  name="init">
+    <mkdir  dir="${classes}"/>
+  </target>
+
+  <target  name="build" depends="clean, compile" description="clean out old crud, then build new stud"/>
+
+  <target  name="jar" depends="build" description="generate the jar file">
+    <delete  file="jocketserver.jar"/>
+
+    <jar  jarfile="jocketserver.jar" basedir="classes">
+      <include  name="**/*"/>
+      <exclude  name="**/*Test.class"/>
+      <manifest>
+        <attribute name="Built-By" value="Justin Martin"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="clean" description="clear out everything in the classes dir">
+    <mkdir  dir="${classes}"/>
+    <delete>
+      <fileset dir="${classes}" includes="**/"/>
+    </delete>
+  </target>
+
+  <target  name="compile" depends="init" description="compile all of the source classes">
+    <javac srcdir="${src}" destdir="${classes}" debug="off"/>
+  </target>
+
+</project>
