@@ -6,8 +6,12 @@
   <component name="ChangeListManager" verified="true">
     <list default="true" id="fb7e5a00-9438-4e58-b34e-ad5611ca613b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JJocketServerTest.java" afterPath="$PROJECT_DIR$/src/JJocketServerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JocketClientTest.java" afterPath="$PROJECT_DIR$/src/JocketClientTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JocketClient.java" afterPath="$PROJECT_DIR$/src/JocketClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JJocketServer.java" afterPath="$PROJECT_DIR$/src/JJocketServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JocketService.java" afterPath="$PROJECT_DIR$/src/JocketService.java" />
     </list>
     <ignored path="JocketServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +74,7 @@
       <file leaf-file-name="JocketClientTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JocketClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+            <state line="98" column="31" selection-start="2788" selection-end="2788" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JJocketServerTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="JJocketServerTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JJocketServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="52" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+            <state line="151" column="23" selection-start="4197" selection-end="4197" vertical-scroll-proportion="1.4705882">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,29 +93,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+      <file leaf-file-name="JocketClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JocketClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="1025" selection-end="1025" vertical-scroll-proportion="1.0">
+            <state line="51" column="30" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="15" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FileParser.java">
+      <file leaf-file-name="JocketService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JocketService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="133" column="44" selection-start="3094" selection-end="3094" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="successHeader" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/successHeader">
+      <file leaf-file-name="JocketServerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JocketServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="9" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +138,7 @@
       <file leaf-file-name="JJocketServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JJocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="28" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
+            <state line="101" column="0" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,37 +146,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_page.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/my_page.html">
+      <file leaf-file-name="FileParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.2631578">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2631578">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/404.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.2631578">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="404Header" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/404Header">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="19" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+            <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,12 +165,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/MyJocketServerTest.java" />
         <option value="$PROJECT_DIR$/src/JocketServer.java" />
         <option value="$PROJECT_DIR$/src/JocketServerTest.java" />
-        <option value="$PROJECT_DIR$/src/JocketService.java" />
-        <option value="$PROJECT_DIR$/src/JocketClient.java" />
-        <option value="$PROJECT_DIR$/src/JocketClientTest.java" />
         <option value="$PROJECT_DIR$/src/FileParser.java" />
         <option value="$PROJECT_DIR$/src/FileParserTest.java" />
         <option value="$PROJECT_DIR$/public/404.html" />
@@ -186,9 +174,13 @@
         <option value="$PROJECT_DIR$/public/successHeader" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/my_page.html" />
-        <option value="$PROJECT_DIR$/src/JJocketServerTest.java" />
-        <option value="$PROJECT_DIR$/src/JJocketServer.java" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/JocketService.java" />
+        <option value="$PROJECT_DIR$/src/JJocketServer.java" />
+        <option value="$PROJECT_DIR$/src/JJocketServerTest.java" />
+        <option value="$PROJECT_DIR$/src/JocketClientTest.java" />
+        <option value="$PROJECT_DIR$/src/JocketClient.java" />
       </list>
     </option>
   </component>
@@ -297,8 +289,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JJocketServerTest.canRespondWithAnErrorPageForANonExistentFile">
-    <configuration default="false" name="JJocketServerTest" type="JUnit" factoryName="JUnit" temporary="true">
+  <component name="RunManager" selected="JUnit.JocketClientTest.canRequestToViewAnImagePage">
+    <configuration default="false" name="JJocketServerTest.canCreateFileResponseHeader" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma" />
       <extension name="snapshooter" />
       <module name="JocketServer" />
@@ -306,30 +298,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JJocketServerTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="FileParserTest.canParseAFileAndReturnAString" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" runner="emma" />
-      <extension name="snapshooter" />
-      <module name="JocketServer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileParserTest" />
-      <option name="METHOD_NAME" value="canParseAFileAndReturnAString" />
+      <option name="METHOD_NAME" value="canCreateFileResponseHeader" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -344,7 +313,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="JJocketServerTest.canCreateMyPageResponse" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="JJocketServerTest.canCreateFileResponse" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma" />
       <extension name="snapshooter" />
       <module name="JocketServer" />
@@ -352,7 +321,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JJocketServerTest" />
-      <option name="METHOD_NAME" value="canCreateMyPageResponse" />
+      <option name="METHOD_NAME" value="canCreateFileResponse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -367,7 +336,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="JJocketServerTest.canDetermineWhichPageToRespondWith" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="JJocketServerTest.canGetFileResponseHeaderFromPageSearch" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma" />
       <extension name="snapshooter" />
       <module name="JocketServer" />
@@ -375,7 +344,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JJocketServerTest" />
-      <option name="METHOD_NAME" value="canDetermineWhichPageToRespondWith" />
+      <option name="METHOD_NAME" value="canGetFileResponseHeaderFromPageSearch" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -390,15 +359,38 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="JJocketServerTest.canRespondWithAnErrorPageForANonExistentFile" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="JocketClientTest.canRequestToViewTheHomePage" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma" />
       <extension name="snapshooter" />
       <module name="JocketServer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JJocketServerTest" />
-      <option name="METHOD_NAME" value="canRespondWithAnErrorPageForANonExistentFile" />
+      <option name="MAIN_CLASS_NAME" value="JocketClientTest" />
+      <option name="METHOD_NAME" value="canRequestToViewTheHomePage" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JocketClientTest.canRequestToViewAnImagePage" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="emma" />
+      <extension name="snapshooter" />
+      <module name="JocketServer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JocketClientTest" />
+      <option name="METHOD_NAME" value="canRequestToViewAnImagePage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -591,12 +583,31 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.JJocketServerTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FileParserTest.canParseAFileAndReturnAString" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canCreateMyPageResponse" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canDetermineWhichPageToRespondWith" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canRespondWithAnErrorPageForANonExistentFile" />
+    <configuration default="false" name="Main" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma" />
+      <extension name="snapshooter" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="8888" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JocketServer" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canCreateFileResponseHeader" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canCreateFileResponse" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JJocketServerTest.canGetFileResponseHeaderFromPageSearch" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JocketClientTest.canRequestToViewTheHomePage" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.JocketClientTest.canRequestToViewAnImagePage" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -612,15 +623,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1684" y="6" width="1547" height="859" extended-state="0" />
+    <frame x="1702" y="18" width="1547" height="859" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2621748" sideWeight="0.6156969" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32830626" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32746956" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -633,7 +645,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -670,40 +681,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/JocketServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JocketServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="8" selection-start="571" selection-end="583" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JocketService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="28" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="116" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="46" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
@@ -713,23 +690,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="-1.2631578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/successHeader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -748,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="-1.2631578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/my_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.2631578">
@@ -762,9 +718,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="38" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="15" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JocketService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="44" selection-start="3094" selection-end="3094" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/successHeader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="18" selection-start="58" selection-end="58" vertical-scroll-proportion="0.05882353">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="34" selection-end="34" vertical-scroll-proportion="0.06169666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JocketServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JocketClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+        <state line="98" column="31" selection-start="2788" selection-end="2788" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="30" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -773,7 +791,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JJocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="28" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
+        <state line="101" column="0" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -782,17 +800,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JJocketServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="52" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
+        <state line="151" column="23" selection-start="4197" selection-end="4197" vertical-scroll-proportion="1.4705882">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="1025" selection-end="1025" vertical-scroll-proportion="1.0">
-          <folding />
         </state>
       </provider>
     </entry>

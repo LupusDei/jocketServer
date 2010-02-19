@@ -44,7 +44,7 @@ public class JocketService
     try
     {
       Socket clientSocket = serverSocket.accept();
-
+      System.out.println("Made Connection!!");
       Thread servicerThread = new Thread(new ServiceRunner(clientSocket));
       nobleServiceThreads.add(servicerThread);
       servicerThread.start();
@@ -128,10 +128,10 @@ public class JocketService
     {
       try
       {
-
+        System.out.println("Have Started Serving");
         applicationServer.serve(clientSocket);
         clientSocket.close();
-
+        System.out.println("Finished Serving");
       }
       catch (IOException e)
       {

@@ -33,7 +33,9 @@
   </target>
 
   <target  name="compile" depends="init" description="compile all of the source classes">
-    <javac srcdir="${src}" destdir="${classes}" debug="off"/>
+    <javac srcdir="${src}" destdir="${classes}" debug="off">
+      <exclude  name="**/*Test.java"/>
+    </javac>
   </target>
 
 </project>

@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.ConnectException;
 import java.net.Socket;
 
@@ -41,5 +39,18 @@ public class JocketClient
   {
     StringBuffer request = new StringBuffer("GET " + relativePath + " HTTP/1.1\nHost: localhost:" + myPort + "\n\r\n");
     return request.toString();
+  }
+
+  public File getImagePage() throws IOException
+  {
+    PrintStream ps = JocketService.getPrintStream(mySocket);
+    ps.println(formGETReqest("/images/me.jpg"));
+    File fileTest = File.createTempFile("meTest",".jpg");
+    fileTest.deleteOnExit();
+    FileOutputStream fos = new FileOutputStream(fileTest);
+    BufferedInputStream bs = new BufferedInputStream(mySocket.getInputStream());
+    byte[] bytes = new byte[12];
+    
+    return fileTest;
   }
 }

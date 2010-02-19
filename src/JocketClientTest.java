@@ -2,9 +2,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 
 import static junit.framework.Assert.assertFalse;
@@ -61,14 +59,23 @@ public class JocketClientTest
   }
 
   @Test
-  public void canRequestToViewTheHomePage() throws IOException, InterruptedException
+  public void canRequestToViewTheHomePage() throws IOException
   {
     service.serve(myPort, mocketServer);
     client.connect("localhost");
-    Thread.sleep(15);
     String homePage = client.getHomePage();
     assertEquals(properGetHomeRequest, mocketServer.getLastRequest());
     assertEquals("HOME PAGE!", homePage);
+  }
+
+  @Test
+  public void canRequestToViewAnImagePage() throws IOException
+  {
+    service.serve(myPort, mocketServer);
+    client.connect("localhost");
+    File imagePage = client.getImagePage();
+    assertEquals("GET /images/me.jpg HTTP/1.1\nHost: localhost:" + myPort + "\n", mocketServer.getLastRequest());
+    assertEquals("Image PAGE!", imagePage);
   }
 
   private class MocketServer implements JocketServer
@@ -83,7 +90,18 @@ public class JocketClientTest
         while((inputLine = br.readLine()) != null && inputLine.length() != 0)
         request.append(inputLine + "\n");
         PrintStream ps = JocketService.getPrintStream(sock);
-        ps.println("HOME PAGE!");
+        if(request.toString().contains("me.jpg")) {
+          File file = new File("public/images/me.jpg");
+          FileInputStream fis = new FileInputStream(file);
+          byte[] b = new byte[(int)file.length()];
+          fis.read(b);
+          ByteArrayOutputStream os = new ByteArrayOutputStream();
+          os.write(b,0,b.length);
+          os.writeTo(sock.getOutputStream());
+
+        }
+        else
+          ps.println("HOME PAGE!");
         sock.close();
       }
       catch (IOException e)
