@@ -75,7 +75,7 @@ public class JocketClientTest
     client.connect("localhost");
     File imagePage = client.getImagePage();
     assertEquals("GET /images/me.jpg HTTP/1.1\nHost: localhost:" + myPort + "\n", mocketServer.getLastRequest());
-    assertEquals("Image PAGE!", imagePage);
+    assertTrue(imagePage.length() > 1000);
   }
 
   private class MocketServer implements JocketServer

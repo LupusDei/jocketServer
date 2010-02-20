@@ -49,7 +49,10 @@ public class JocketClient
     fileTest.deleteOnExit();
     FileOutputStream fos = new FileOutputStream(fileTest);
     BufferedInputStream bs = new BufferedInputStream(mySocket.getInputStream());
-    byte[] bytes = new byte[12];
+    File image = new File("public/images/me.jpg");
+    byte[] bytes = new byte[(int)image.length()];
+    bs.read(bytes);
+    fos.write(bytes);
     
     return fileTest;
   }

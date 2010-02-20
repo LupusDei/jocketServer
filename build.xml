@@ -21,6 +21,7 @@
       <exclude  name="**/*Test.class"/>
       <manifest>
         <attribute name="Built-By" value="Justin Martin"/>
+        <attribute name="Main-Class" value="Main"/>
       </manifest>
     </jar>
   </target>
