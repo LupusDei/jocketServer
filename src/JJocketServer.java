@@ -113,10 +113,12 @@ public class JJocketServer implements JocketServer
 
       return getSuccessHeader() + getTextFromFileName(rootDir + path);
     }
-    else if(fileType.equals("image/jpeg") || fileType.equals("application/pdf"))
+    else if(fileType.equals("image/jpeg") || fileType.equals("image/vnd.microsoft.icon") || fileType.equals("application/pdf"))
     {
       return getImageHeaderResponse(path, fileType);
     }
+    else if (fileType.equals("text/javascript"))
+      return getImageHeaderResponse(path, fileType);
     else
       return getOtherMimeTypeResponse(path);
   }
@@ -182,12 +184,18 @@ public class JJocketServer implements JocketServer
     String fileName = filePath.substring(filePath.lastIndexOf("/"));
     FileNameMap map = URLConnection.getFileNameMap();
     String type = map.getContentTypeFor(fileName);
+    System.out.println("FILE NAME: " + fileName);
+    if (fileName.indexOf(".js") != -1)
+      type = "text/javascript";
+    if (fileName.indexOf(".ico") != -1)
+      type = "image/vnd.microsoft.icon";
+    System.out.println("FILE TYPE: " + type);
     return type;
   }
 
   public String getImageHeaderResponse(String filePath, String fileType)
   {
-
+    System.out.println("FILE PATH: " + rootDir + filePath);
     File image = new File(rootDir + filePath);
     if (image.exists())
     {
@@ -204,7 +212,7 @@ public class JJocketServer implements JocketServer
   {
     String fileType = getMIMEType(path);
 
-    return getSuccessHeader() + getTextFromFileName(rootDir + "/otherMime.html") + "<html><p>"+fileType+"</p><p>Now leave me alone</p></html>\n\r\n";
+    return getSuccessHeader() + getTextFromFileName(rootDir + path);
   }
 
   public String[] getInputArgs()

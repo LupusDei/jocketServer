@@ -1,4 +1,16 @@
 <html><h2>Home Page!</h2>
 <img src="/images/me.jpg">
+<script type="text/javascript">
+  function goToTicTacToe() {
+    var loc = window.location.toString();
+    if (loc.lastIndexOf("index.html") !== -1)
+      loc = loc.slice(0,loc.lastIndexOf("index.html"));
+    else
+      loc = loc.slice(0,loc.lastIndexOf("/") + 1);
+    var path = loc + "ticTacToe/tictactoe.html";
+    window.location.assign(path);
+  };
+</script>
+<input type='button' value='TicTacToe' onclick='goToTicTacToe()' />
 </html>
 

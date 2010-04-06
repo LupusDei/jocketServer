@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title> Game Test </title>
+    <script language="JavaScript" src="../../jsunit/app/jsUnitCore.js"></script>
+    <script language="JavaScript" src="../game/computer.js"></script>
+    <script language="JavaScript" src="../game/game.js"></script>
+  </head>
+  <body>
+    <script language="javascript">
+    function exposeTestFunctionNames() {
+      return ["testCanMakeANewComputer", "testCanMakeARandomMove", "testCanMakeASmartMove", "testMiniMaxDeciderWillCreateAListOfMoves", "testCanScoreALosingMove", "testCanScoreAGoodMove", "testCanFindTheBestMove"];
+    }
+    
+    String.prototype.contains = function (subString) {
+        return this.indexOf(subString) !== -1;
+    };
+
+    var gameboard = makeBoard();
+    var computer = computerMaker(gameboard, 1);
+    var myTurn = 1;
+    var hisTurn = -1;
+    function testCanMakeANewComputer() {
+      var turn = 1;
+      assertEquals(gameboard, computer.currentBoard);
+      assertEquals(gameboard.squares[0], computer.virtualBoard[0]);
+      assertEquals(myTurn, computer.turn);
+    }
+
+    function testCanMakeARandomMove() {
+      computer.virtualBoard[1] = -1;
+      var num = computer.makeRandomMove();
+      assertEquals(1, computer.virtualBoard[num]);
+      assertEquals(computer.turn, hisTurn);
+      var nums = [1,num];
+      var i;
+      for (i = 0; i < 7; i += 1)
+        nums.push(computer.makeRandomMove());
+      for(i = 0; i < 9; i+=1)
+        assertTrue(computer.virtualBoard[i] !== 0);
+      gameboard.squares = computer.virtualBoard;
+      num = computer.makeRandomMove();
+      assertEquals(-1, num);
+    }
+
+    function testCanMakeASmartMove() {
+      gameboard.squares = [1,-1,1,-1,-1,0,0,1,0];
+      computer.virtualBoard = gameboard.squares;
+      var num = computer.makeSmartMove();
+      assertEquals(num, 5);
+      computer.virtualBoard = [1,0,0,-1,-1,0,0,0,0];
+      computer.turn = 1;
+      num = computer.makeSmartMove();
+      assertEquals(5,num);
+      computer.virtualBoard = [0,0,0,0,0,0,0,0,0];
+      computer.turn = 1;
+      num = computer.makeSmartMove();
+      assertEquals(4,num);
+    }
+
+    var minimaxDecider;
+    var smallGameSetUp = function () {
+      gameboard.squares = [1,-1,1,-1,-1,0,0,1,0];
+      minimaxDecider = minimaxMaker(gameboard,0);
+      minimaxDecider.setTurn(myTurn);
+    };
+    function testMiniMaxDeciderWillCreateAListOfMoves() {
+      smallGameSetUp();
+      var moves = minimaxDecider.getAllMoves();
+      assertEquals(5, moves[0]);
+      assertEquals(6, moves[1]);
+      assertEquals(8, moves[2]);
+    }
+
+    function testCanScoreALosingMove() {
+      smallGameSetUp();
+      var score = minimaxDecider.scoreMove(6);
+      assertEquals(-1, score);
+      score = minimaxDecider.scoreMove(8);
+      assertEquals(-1, score);
+    }
+
+    function testCanScoreAGoodMove() {
+      smallGameSetUp();
+      var score = minimaxDecider.scoreMove(5);
+      assertEquals(0, score);
+    }
+
+    function testCanFindTheBestMove() {
+      smallGameSetUp();
+      var move = minimaxDecider.findBestMove();
+      assertEquals(5, move);
+    }
+
+
+    </script>
+  </body>
+</html>

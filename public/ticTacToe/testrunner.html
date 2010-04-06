@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title> Test Runner </title>
+    <h1> Justin's Test Runner </h1>
+    <script language="javascript">
+      function runTest() {
+         var page = document.getElementById("input").value;
+         openJsUnitTestPage(page);
+      }
+
+      function openJsUnitTestPage(page) {
+      	var jsunit = "../jsunit/testRunner.html";
+      	var options = "autoRun=true";
+      	var root = location.toString();
+      	if(root.indexOf('file:') != -1) {
+      		root = root.slice(root.indexOf('file:')+8, root.length);
+      	}
+      	var path = root.slice(0, root.lastIndexOf('testrunner.'));
+      	var url = jsunit +"?"+ options +"&testpage="+ path + page;
+      	window.open(url, "MozileTests");
+      }
+      
+      function runAll() {
+        openJsUnitTestPage("tests/testSuite.html");
+      }
+    </script>
+  </head>
+  <body>
+    TestFile: <input type="text" id="input" /> <br/> 
+    <input type="button" value="Run" onclick="runTest()" /> <br/>
+    <input type="button" value="Run All" onclick="runAll()" />
+  </body>
+</html>
+

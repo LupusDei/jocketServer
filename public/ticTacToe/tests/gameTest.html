@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title> Game Test </title>
+    <script language="JavaScript" src="../../jsunit/app/jsUnitCore.js"></script>
+    <script language="JavaScript" src="../game/game.js"></script>
+    <script language="JavaScript" src="../game/computer.js"></script>
+  </head>
+  <body>
+    <script language="javascript">
+    function exposeTestFunctionNames() {
+      return ["testMakeGame", "testMakesComputerForSinglePlayer", "testMarkBox", "testCheckWin", "testCheckWinnerDisplay", "testHandlesCatsGame"];
+    }
+
+    String.prototype.contains = function (subString) {
+        return this.indexOf(subString) !== -1;
+    };
+
+    function testMakeGame() {
+      document.writeln("<html><input type='text' id='player1' value='Justin' /></html>");
+      document.writeln("<html><input type='text' id='player2' value='' /></html>");
+      makeGame(2);
+      assertEquals(2,GAME.players);
+      assertEquals(9,GAME.boxes.length);
+      assertEquals(0,GAME.boxes[0]);
+      assertEquals(9,GAME.board.squares.length);
+      assertEquals(0,GAME.board.squares[0]);
+      assertEquals(0,GAME.board.checkWin());
+      assertEquals(0,GAME.turn);
+      assertEquals("Justin", GAME.player1);
+      assertEquals("Player 2", GAME.player2);
+    }
+    
+    function testMakesComputerForSinglePlayer() {
+      makeGame(1);
+      assertTrue(document.body.innerHTML.contains("YOU ARE MINE!"));
+      assertEquals("John Conway", GAME.player2);
+    }
+
+
+    function testMarkBox() {
+      makeGame(2);
+      makeMove(0);
+      assertEquals("images/x.jpg", GAME.boxes[0]);
+      makeMove(0);
+      assertEquals("images/x.jpg", GAME.boxes[0]);
+      makeMove(1);
+      assertEquals("images/o.jpg", GAME.boxes[1]);
+    }
+
+    function testCheckWin() {
+      board = makeBoard();
+      board.squares[0] = -1;
+      board.squares[1] = -1;
+      board.squares[2] = -1;
+      assertTrue(board.checkWin() === -1);
+
+      board.squares[0] = 3;
+      board.squares[3] = 3;
+      board.squares[6] = 3;
+      assertTrue(board.checkWin()===3);
+
+      board.squares[0] = 3;
+      board.squares[4] = 3;
+      board.squares[8] = 3;
+      assertTrue(board.checkWin()===3);
+    }
+    
+
+    function testCheckWinnerDisplay() {
+      makeGame(2);
+      GAME.board.squares = [42,42,42,42,42,42,42,42,42];
+      assertTrue(GAME.board.checkWin() === 42);
+      setGameWinner();
+      assertTrue(document.body.innerHTML.contains("Player 2 Has Won!!"));
+    }
+
+    function testHandlesCatsGame() {
+      makeGame(1);
+      GAME.board.squares = [1,2,3,4,5,6,7,8];
+      COMPUTER.currentBoard = board.squares;
+      var cats = makeMove(1);
+      assertEquals(cats, "CATS");
+      assertTrue(document.body.innerHTML.contains("Cats Game... BORING"));
+    }
+
+    
+    </script>
+  </body>
+</html>
